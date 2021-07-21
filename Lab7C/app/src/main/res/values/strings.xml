@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Lab7C</string>
+    <string name="seabass">Enter base and height please</string>
+    <string name="base">Enter base</string>
+    <string name="height">Enter height</string>
+</resources>

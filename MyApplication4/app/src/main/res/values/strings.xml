@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="press_me">Press me</string>
+    <string name="winter_is_coming">Winter is coming!</string>
+</resources>

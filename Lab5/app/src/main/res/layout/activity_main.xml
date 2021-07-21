@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+//Christopher Guzowski Lab 5
+    <TextView
+        android:id="@+id/christext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/christext"
+        app:layout_constraintBottom_toTopOf="@id/CUNY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+    //Christopher Guzowski Lab 5
+    <Button
+        android:id="@+id/WSU"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/wsutext"
+        app:layout_constraintBottom_toTopOf="@id/OU"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/CUNY"
+        app:layout_constraintTop_toBottomOf="@id/christext" />
+    //Christopher Guzowski Lab 5
+    <Button
+        android:id="@+id/CUNY"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/cunytext"
+        app:layout_constraintBottom_toTopOf="@id/NYU"
+        app:layout_constraintLeft_toRightOf="@id/WSU"
+        app:layout_constraintRight_toLeftOf="@id/ISU"
+        app:layout_constraintTop_toBottomOf="@id/christext" />
+    <Button
+        android:id="@+id/ISU"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/isutext"
+        app:layout_constraintBottom_toTopOf="@id/DUKE"
+        app:layout_constraintLeft_toRightOf="@id/CUNY"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/christext" />
+    <Button
+        android:id="@+id/OU"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/outext"
+        app:layout_constraintBottom_toTopOf="@id/OSU"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/NYU"
+        app:layout_constraintTop_toBottomOf="@id/WSU" />
+    <Button
+        android:id="@+id/NYU"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/nyutext"
+        app:layout_constraintBottom_toTopOf="@id/OPSU"
+        app:layout_constraintLeft_toRightOf="@id/OU"
+        app:layout_constraintRight_toLeftOf="@id/DUKE"
+        app:layout_constraintTop_toBottomOf="@id/CUNY" />
+    <Button
+        android:id="@+id/DUKE"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/duketext"
+        app:layout_constraintTop_toBottomOf="@id/ISU"
+        app:layout_constraintLeft_toRightOf="@id/NYU"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/UTULSA"/>
+    <Button
+        android:id="@+id/OSU"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/osutext"
+        app:layout_constraintBottom_toTopOf="@id/KU"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/OPSU"
+        app:layout_constraintTop_toBottomOf="@id/OU" />
+    <Button
+        android:id="@+id/OPSU"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/opsutext"
+        app:layout_constraintBottom_toTopOf="@id/RICE"
+        app:layout_constraintLeft_toRightOf="@id/OSU"
+        app:layout_constraintRight_toLeftOf="@id/UTULSA"
+        app:layout_constraintTop_toBottomOf="@id/NYU" />
+    <Button
+        android:id="@+id/UTULSA"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/utulsatext"
+        app:layout_constraintTop_toBottomOf="@id/DUKE"
+        app:layout_constraintLeft_toRightOf="@id/OPSU"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/BC"/>
+    <Button
+        android:id="@+id/KU"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/kutext"
+        app:layout_constraintBottom_toTopOf="@id/MIT"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/RICE"
+        app:layout_constraintTop_toBottomOf="@id/OSU" />
+    <Button
+        android:id="@+id/RICE"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/ricetext"
+        app:layout_constraintBottom_toTopOf="@id/BROWN"
+        app:layout_constraintLeft_toRightOf="@id/KU"
+        app:layout_constraintRight_toLeftOf="@id/BC"
+        app:layout_constraintTop_toBottomOf="@id/OPSU" />
+    <Button
+        android:id="@+id/BC"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/bctext"
+        app:layout_constraintTop_toBottomOf="@id/UTULSA"
+        app:layout_constraintLeft_toRightOf="@id/RICE"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/SUNY"/>
+    <Button
+        android:id="@+id/MIT"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/mittext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/BROWN"
+        app:layout_constraintTop_toBottomOf="@id/KU" />
+    <Button
+        android:id="@+id/BROWN"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/browntext"
+        app:layout_constraintTop_toBottomOf="@id/RICE"
+        app:layout_constraintLeft_toRightOf="@id/MIT"
+        app:layout_constraintRight_toLeftOf="@id/SUNY"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+        android:id="@+id/SUNY"
+        android:layout_width="80dp"
+        android:layout_height="39dp"
+        android:text="@string/sunytext"
+        app:layout_constraintTop_toBottomOf="@id/BC"
+        app:layout_constraintLeft_toRightOf="@id/BROWN"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</android.support.constraint.ConstraintLayout>

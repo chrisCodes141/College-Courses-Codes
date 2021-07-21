@@ -1,0 +1,21 @@
+<resources>//Christopher Guzowski Lab 5
+    <string name="app_name">Lab5</string>
+    <string name="wsutext">WSU</string>
+    <string name="cunytext">CUNY</string>
+    <string name="isutext">ISU</string>
+    <string name="outext">OU</string>
+    <string name="nyutext">NYU</string>
+    <string name="duketext">DUKE</string>
+    <string name="osutext">OSU</string>
+    <string name="opsutext">OPSU</string>
+    <string name="utulsatext">UTULSA</string>
+    <string name="kutext">KU</string>
+    <string name="ricetext">RICE</string>
+    <string name="bctext">BC</string>
+    <string name="mittext">MIT</string>
+    <string name="browntext">BROWN</string>
+    <string name="sunytext">SUNY</string>
+    <string name="christext">Tap on a button to see the info. Christopher Guzowski</string>
+    //Christopher Guzowski Lab 5
+</resources>
+

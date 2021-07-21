@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name = "chrisText" type="id"/>
+    <item name="wsu" type="id" />
+    <item name="ou" type="id" />
+    <item name="osu" type="id" />
+    <item name="ku" type="id" />
+    <item name="mit" type="id" />
+    <item name="cuny" type="id" />
+    <item name="nyu" type="id" />
+    <item name="opsu" type="id" />
+    <item name="rice" type="id" />
+    <item name="brown" type="id" />
+    <item name="isu" type="id" />
+    <item name="duke" type="id" />
+    <item name="utulsa" type="id" />
+    <item name="bc" type="id" />
+    <item name="suny" type="id" />
+</resources>
