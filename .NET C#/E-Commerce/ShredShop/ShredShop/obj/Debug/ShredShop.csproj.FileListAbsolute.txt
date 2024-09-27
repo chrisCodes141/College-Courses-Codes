@@ -1,0 +1,45 @@
+C:\Users\mark\source\repos\ShredShop\ShredShop\bin\Debug\ShredShop.exe.config
+C:\Users\mark\source\repos\ShredShop\ShredShop\bin\Debug\ShredShop.exe
+C:\Users\mark\source\repos\ShredShop\ShredShop\bin\Debug\ShredShop.pdb
+C:\Users\mark\source\repos\ShredShop\ShredShop\bin\Debug\Interop.WMPLib.dll
+C:\Users\mark\source\repos\ShredShop\ShredShop\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.csprojAssemblyReference.cache
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\Interop.WMPLib.dll
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.csproj.ResolveComReference.cache
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.Form1.resources
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.Properties.Resources.resources
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.csproj.GenerateResource.cache
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.csproj.CoreCompileInputs.cache
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.exe
+C:\Users\mark\source\repos\ShredShop\ShredShop\obj\Debug\ShredShop.pdb
+E:\2019 classes\4709\ShredShop\ShredShop\bin\Debug\ShredShop.exe.config
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\Interop.WMPLib.dll
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\AxInterop.WMPLib.dll
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\ShredShop.csproj.ResolveComReference.cache
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\ShredShop.exe
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\ShredShop.pdb
+E:\2019 classes\4709\ShredShop\ShredShop\bin\Debug\ShredShop.exe
+E:\2019 classes\4709\ShredShop\ShredShop\bin\Debug\ShredShop.pdb
+E:\2019 classes\4709\ShredShop\ShredShop\bin\Debug\Interop.WMPLib.dll
+E:\2019 classes\4709\ShredShop\ShredShop\bin\Debug\AxInterop.WMPLib.dll
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\ShredShop.csprojResolveAssemblyReference.cache
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\ShredShop.Form1.resources
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\ShredShop.Properties.Resources.resources
+E:\2019 classes\4709\ShredShop\ShredShop\obj\Debug\ShredShop.csproj.GenerateResource.Cache
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\bin\Debug\ShredShop.exe.config
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\Interop.WMPLib.dll
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.csproj.ResolveComReference.cache
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.exe
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.pdb
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\bin\Debug\ShredShop.exe
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\bin\Debug\ShredShop.pdb
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\bin\Debug\Interop.WMPLib.dll
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.csprojResolveAssemblyReference.cache
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.Properties.Resources.resources
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.csproj.GenerateResource.Cache
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.MainPage.resources
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.RegisterPage.resources
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\FINAL PROJ\ShredShop\ShredShop\obj\Debug\ShredShop.LoginPage.resources

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href=".myStyle.css">
+<style type="text/css">
+	#p
+	{
+		background-color:black;
+		color: white;
+		font-size:25px;
+	}
+	td
+	{
+		margin-left:auto;
+		margin-right:auto;
+	}
+</style>
+<script>
+//For Male
+var boney = new Image;
+var buff = new Image;
+
+function startup()
+{
+	boney.src = "boney.jpg";
+	buff.src = "buff.jpg";
+	return;
+}
+function turnBoney()
+{
+	document.change.src = boney.src;
+	return;
+}
+function turnBuff()
+{
+	document.change.src = buff.src;
+	return;
+}
+//For Female
+var overweight = new Image;
+var fit = new Image;
+
+function startup1()
+{
+	overweight.src = "overweight.jpg";
+	fit.src = "fit.jpg";
+	return;
+}
+function turnOverweight()
+{
+	document.change1.src = overweight.src;
+	return;
+}
+function turnFit()
+{
+	document.change1.src = fit.src;
+	return;
+}
+//For coaches
+var imgArray = new Array(5);
+var index = 0;
+
+function doBack()
+{
+	if (index > 0)
+	{
+		index--;
+		document.ss.src=imgArray[index].src;
+	}
+	return;
+}
+function doNext()
+{
+	if(index<4)
+	{
+		index++;
+		document.ss.src=imgArray[index].src;
+	}
+	return;
+}
+function startup2()
+{
+	imgArray[0]= new Image;
+	imgArray[0].src= "p1.jpg";
+	imgArray[1]= new Image;
+	imgArray[1].src= "p2.jpg";
+	imgArray[2]= new Image;
+	imgArray[2].src= "p3.jpg";
+	imgArray[3]= new Image;
+	imgArray[3].src= "p4.jpg";
+	imgArray[4]= new Image;
+	imgArray[4].src= "p5.jpg";
+	}
+</script>
+</head>
+<body onLoad="startup(); startup1(); startup2();">
+<h1>Home</h1>
+<table>
+<tr>
+	<td><h2><b><u>About US</u></b></h2></td>
+	<td colspan="2" style="background-color: black; color:white; font-size:40px; text-align:center;"><u>Hover Mouse Over Image(s)</u></td>
+	<td></td>
+</tr>
+<tr>
+	<td width="50%" height="100"><p id="p"> &nbsp; &nbsp; &nbsp; &nbsp;Here at Witness Fitness we provide a comfortable environment in which you can enlighten yourself about your body and precisely decide what you will strive to accomplish. The goal you've chosen to achieve will be strengthened and supported by our staff to maintain your progress. Offering a variety of programs and equipment for your needs to utilize properly in a  moderate fashion to Increase and/or decrease the body parts you please. Being dedicated and resilient is crucial for us, you and your regime that will provide you with satisfactory results! So allow your muscle to hustle!</p></td>
+<td  width="15%" style="display:block; margin-left:auto; margin-right:auto;"/>
+	<a onMouseOut="turnBoney()" onMouseOver="turnBuff()"><img name="change" src="boney.jpg"></a>
+</td>
+<td width="25%"><a onMouseOut="turnOverweight()" onMouseOver="turnFit()"><img name="change1" src="Overweight.jpg"></td>
+</table>
+<br/><br/>
+<div style="margin-right:30%; margin-left:30%;">
+<table rules="all"  width="20%" height="100px" style="background-color:white;">
+<caption style="background-color:white; font-size:40px;"> Meet Some of our Experts!</caption>
+<tr><td></td><td rowspan="3"><img name="ss" src="p1.jpg"></td>></tr>
+<tr><td height="5px"> <a href="javascript:doBack()">Back</a> </td><td><a href="javascript:doNext()">Next</a></td></tr>
+<tr><td></td><td></td></tr>
+</table>
+</div>
+</body>
+</html>

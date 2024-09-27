@@ -1,0 +1,22 @@
+body
+{
+	background-image:url("bg1.jpg");
+}
+h1
+{
+	font-size: 300%;
+	margin-left:30%;
+	margin-right:30%;
+	text-align: center;
+	background-color: silver;
+	border: solid red 5px;
+	color: red;
+}
+h2
+{
+	font-size: 233%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin-right:77%;
+}

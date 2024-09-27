@@ -1,0 +1,5 @@
+*stat_chart
+  percent Time
+  percent Energy
+  opposed_pair Good
+    Bad

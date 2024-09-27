@@ -1,0 +1,274 @@
+*title ChoicesConsequences
+*author Christopher Guzowski
+*scene_list
+  startup
+
+*create Time 100
+*create Energy 100
+*create Good 50
+
+*comment ------------------------------------------
+
+You wake up from a slumber so long, your brain is just now remembering how it functions, you start to understand you're a human and waking up, fantastic! Your house is old and got mold, dust and rust, smell that reeks making you breathe through your cheeks. Your body vaguely reminds you what comes next..
+
+*choice
+
+  #Oh yes... but of course, now I remmeber why sleep sounds so sweet! Lets' go back slumber.. 
+    Gravity takes over *you tumble to your bed* 
+    Your bed can't handle this any longer and runs outside
+    *goto outside
+
+  #*munch munch* you look down as your belly button wants to swallow like a black hole! You decide to make yourself a full course breakfast consisting of Toast, eggs, sausage, bacon, cereal... + more
+    after eating you have the energy to run outa this hell hole and go as far as you can! *Run through wall*
+    *set Time -10
+    *set Energy +20
+    *goto outside
+
+  #GOOOooood ol' STREEEtch.... *CRACK* oof, how about a quick workout? 
+    You are feeling it, feeling of being on fire! You take your workout to the next level and decide to run outside*
+    *set Energy -10
+    *set Good +1
+    *goto outside
+
+  #You can't handle the truth of your house and the state it is in.... Complete and utter chaos complimented with havoc! You decide to run outside without even eating....
+    *set Energy -10
+    *set Good -1
+    *goto outside
+
+*comment ------------------------------------------
+
+*label outside
+
+Now that you got your first wiff of fresh air in ages, you feel alive again! You embrace the adventure and run, while running you see somthing shiny on the floor, as you get close you realize its a coin on the floor... you forgot its value and are interrupted by a homeless person begging for it...
+
+*choice
+
+  #Give them the coin, it's theirs / they need it more..
+    *set Good +1
+    *goto HL
+
+  #"I found it first! I'm hungry or will be hungry too and food is good." *keep coin & continue to run*
+    *set Good -1
+    *goto run
+
+  #*break coin in half* give half a coin & continue to run**
+    *set Energy -5
+    *goto run
+
+*comment ------------------------------------------
+
+*label run
+
+You run and run from all the madness you woke up to, you are pouring sweat, literally! you see a small plant in the distance and the peace and beauty of it resonates within you. As you run by it you notice it's dying from dehyrdation, how convenient since you're sweating!
+
+*choice
+  #You decide to sit down next to it so it can soak up all the dripping sweat!
+    The plant restores a bit..
+    *set Good +2
+    *set Time -10
+    *goto plant
+  #You run by it whipping your head at it sprinkling it with some of your sweat drops, "take that and goodluck!" you say...
+    *set Energy -1
+    *goto runn
+  #You run by the plant, making eye - to - leaf contact, "sruvial of the fittest" you say as you run psat it undeterred from your journey.
+    *set Good -1
+    *goto runn
+
+*comment ------------------------------------------
+
+*label plant
+
+Sitting so peacfully... when suddenly you smell burning hair... you feel warmth on your behind and look back to notice a forest fire! You also feel hungry...
+
+*choice
+  #You're afraid the flower will die if you pluck it to take with you
+    *choice
+      #If the flower must die, it shall be with me and not with the fire!
+        You pluck the flower with its roots and run!
+        *set Good +1
+        *goto runn
+      #Fire is natural, the dried up flower will fuel it!
+        You run away from the situation
+        *set Good -1
+        *goto runn
+  #The fire won't get you, I will!
+    You eat the plant and run off
+    *set Good +1
+    *set Energy +1
+    *goto runn
+
+
+*comment ------------------------------------------
+
+*label runn
+
+You run like never before! Your feet move so fast it seems they're vibrating and multiplying, as you notice this phenomena you realize the floor is missing! When you look around you actually took off into the skies and your trajectory is for a MOUNTAIN! (3v3r3st)
+
+*choice
+  #"A front flip would dispose of this so called "obstacle"!"
+    You do a front flip and sure enough land on the other side
+    *set Energy -5
+    *goto granny
+  #"HEH, you dare stand before me?!? Move mountain or I'll fly right through!" 
+    *set Energy -10
+    *goto_scene hhl
+  #"MAYDAY MAYDAY SENDING SOS! Preparing to land!~" you will slowly slow down your legs in hopes of descending peacfully..
+    *goto granny
+  #Let's shuffle faster and Soar for higher skies!
+    You are going so fast at such an angle that shoots you through the Ozone layer and out into space..
+    *set Energy -20 
+    *goto_scene hhl
+
+*comment ------------------------------------------
+
+*label granny
+As your legs begin to give out, you contemplate... "Why am I evenr running?"
+*line_break
+slowing down to a stop right by a old granny... "my cane! WHERE IT BE?!??!?"
+
+*choice
+  #Stand quietly... perhaps she is not only blind but also deaf! *you catch all the bullets of sweat before they hit the ground and make noise*
+   *set Time - 10
+   *set Energy - 10
+   *goto thewait
+
+  #You offer to help find the cane.
+    "oh thank you so much young lad!"
+    *set Time -10
+    *set Time -10
+    *set Good +2
+    *goto cane
+
+  #"IT BE WHERE IT IS"
+    Granny may be old, but so fast before you can even finish your statement she makes quick work of you.
+    *set Good -1
+    *goto_scene hhl
+*comment ------------------------------------------
+
+*label thewait
+Come here caney cane...
+
+M-MM-MMY CANE! cane! CaNe! I"M GOING INSANE!
+
+*choice
+  #Keep on standing, she must move eventually...
+    *set Time - 10
+    *set Energy - 10
+    *goto thewait2
+  #It's over there!
+    *set Good -1
+    #She looks at you and where you're pointing, you realize she isn't blind, she looks at your miserable attempt of a bluff and doesn't see her cane there, she makes quick work of you.
+    *goto_scene hhl
+  #Back away slowly...
+    Granny may be old, but so fast before you can even finish your first step she hears it, dashes to you and makes quick work of you.
+    *set Good -1
+    *goto_scene hhl
+
+
+*label thewait2
+
+Oh cane, we've been doing this since I can remember, it's so mundane..
+*line_break
+I'm going insane!
+
+*choice
+  #Keep on standing, she must move eventually...
+    *set Time - 10
+    *set Energy - 10    
+    *goto thewait
+  #Back away slowly...
+    Granny may be old, but so fast before you can even finish your first step she hears it, dashes to you and makes quick work of you.
+    *set Good -1
+    *goto_scene hhl
+  #It's over there!
+    #She looks at you and where you're pointing, you realize she isn't blind, she looks at your miserable attempt of a bluff and doesn't see her cane there, she makes quick work of you.
+    *set Good -1
+    *goto_scene hhl
+
+
+*comment ------------------------------------------
+
+*label cane
+Alrighty then, off we go! as you take a step, you break somthing beneath your feet...  It's the cane!
+
+*choice
+  #Ummm... I found it! *hand over parts*
+    Granny go super-sayan and her destructive aura destroys you..
+    *set Good +1
+    *goto_scene hhl
+  #Well, that's a shame.. *Sprint for it*
+    Granny: "If my cane cannot be... neither can you!" she pounces on you like a cheetah...
+    *set Energy -10
+    *goto_scene hhl
+  #Now you have 2 and can go take a hike!
+    Granny picks up the 2 sticks and a surge of PTSD brings her back to her assassin days... her specialty, 2 sticks.
+    *set Good -1
+    *goto_scane hhl
+
+
+*comment ------------------------------------------
+
+*label HL
+
+As you hand them the coin, you're swiftly grabbed by your arm!
+*line_break
+*line_break
+"You have made a powerful ally, do as I say and you'll see.." 
+*line_break
+*choice
+  #Yes
+    "Call me HL!"*feels your muscle to assess your strength
+    *goto yes
+  #No
+    *goto fight
+  #Disagree that they're powrful
+    *goto fight
+
+*label yes
+"Squishy, very squishy... too weak to be my ally"
+*choice
+  #"You think so? lets see!"
+    *goto fight
+  #"Matter of fact, your grip holding my arm is toooo weak, YOU can't be my ally!"
+    *goto fight
+  #"HA! Loooooooool"
+    *goto fight
+
+
+*label fight
+
+I will put you from where you came!
+*line_break
+You murmur to yourself "Over a coin and power.." 
+*line_break
+and proceed to make the following face:
+*fake_choice
+  #:D
+    *goto f1
+  #:)
+    *goto f1
+  #O_O
+    *goto f1
+  #^U^
+    *set Good +1
+    *goto f1
+  #,,/,,(-_-),,\,,
+    *set Good -1
+    *goto f2
+
+*label f1
+Mate... what's that face?!?!?
+  
+
+*label f2
+The dude gets sooo pissed, he multiples..
+*line_break
+(-(-_(-_-)_-)-)
+*line_break
+*choice
+  #Sh** so sorry!
+    *set Good +1
+    *goto_scene hhl
+  #The more the marrier, F**k it and f**k yoouuu.. yall !!!!
+    *set Good -1
+    *goto_scene hhl

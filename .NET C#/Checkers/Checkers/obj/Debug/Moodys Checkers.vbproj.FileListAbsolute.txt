@@ -1,0 +1,11 @@
+C:\Users\Krzys\Documents\Visual Studio 2015\Projects\Moodys Checkers\Moodys Checkers\bin\Debug\Moodys Checkers.exe.config
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\bin\Debug\Moodys Checkers.exe.config
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\bin\Debug\Moodys Checkers.exe
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\bin\Debug\Moodys Checkers.pdb
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\bin\Debug\Moodys Checkers.xml
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\obj\Debug\Moodys Checkers.vbprojResolveAssemblyReference.cache
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\obj\Debug\Moodys Checkers.vbproj.GenerateResource.Cache
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\obj\Debug\Moodys Checkers.exe
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\obj\Debug\Moodys Checkers.xml
+C:\Users\Krzys\Desktop\FINAL SEMESTER!\Visual Studio .net\Moodys\Moodys Checkers\Moodys Checkers\obj\Debug\Moodys Checkers.pdb

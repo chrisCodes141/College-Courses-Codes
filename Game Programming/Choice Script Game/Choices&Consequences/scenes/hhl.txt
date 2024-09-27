@@ -1,0 +1,16 @@
+That's it, your decisions lead you to an end.
+
+*choice
+  *selectable_if (Good > 50) #Heaven
+    You made more positive choices than negative.. Welcome <3
+    *image Heaven.jpg
+    *finish
+  *selectable_if (Good < 50) #Hell
+    You made some poor choices... muaHAHAHAH
+    *image Hell.jpg
+    *finish
+  *selectable_if (Good = 50) #Limbo
+    You somhow managed to be neutral, neither good or bad, we don't know what to do with you... just ... wait ... :)
+    *image Limbo.jpg
+    *finish
+  

@@ -1,0 +1,686 @@
+<!--Saved by Quest 5.8.6836.13983-->
+<asl version="580">
+  <include ref="English.aslx" />
+  <include ref="Core.aslx" />
+  <game name="Key &amp; Chemistry">
+    <gameid>1fdd7d80-2528-47a1-8c64-d905d19f1926</gameid>
+    <version>1.0</version>
+    <firstpublished>2019</firstpublished>
+  </game>
+  <object name="r1">
+    <inherit name="editor_room" />
+    <isroom type="boolean">false</isroom>
+    <descprefix type="string"></descprefix>
+    <alias>The room you united with the floor like never before!</alias>
+    <enter type="script">
+      msg ("You recognize the imprint on the floor... ouch")
+    </enter>
+    <firstenter type="script"><![CDATA[
+      msg ("You feel like you are falling...")
+      ShowYouTube ("0nIeqp93ta4")
+      msg ("You hit the end so fast!")
+      msg ("While waking up your head starts to pound... thats what you fell on.</br><br/>You've fallen into a dungeon and feel smarter having flashbacks of your previous life as a chemist..<br/>You hear faint cringy sounds...")
+    ]]></firstenter>
+    <object name="player">
+      <inherit name="editor_object" />
+      <inherit name="editor_player" />
+    </object>
+    <exit name="Er2" alias="west" to="r2">
+      <inherit name="westdirection" />
+      <locked />
+      <visible />
+      <runscript type="boolean">false</runscript>
+      <lockmessage>There hangs a lock with a key hole.. the lock is locked.</lockmessage>
+      <scenery type="boolean">false</scenery>
+      <script type="script">
+        if (Got(Key)) {
+          if (Use Key) {
+            UnlockExit (Er2)
+          }
+        }
+      </script>
+    </exit>
+    <exit name="Er3" alias="south" to="r3">
+      <inherit name="southdirection" />
+      <locked />
+      <visible />
+      <scenery type="boolean">false</scenery>
+      <lockmessage>There hangs a lock with a key hole.. the lock is locked.</lockmessage>
+    </exit>
+    <exit name="Er4" alias="east" to="r4">
+      <inherit name="eastdirection" />
+      <locked />
+      <lockmessage>There hangs a lock with a key hole.. the lock is locked.</lockmessage>
+    </exit>
+    <exit name="Er5" alias="north" to="r5">
+      <inherit name="northdirection" />
+      <locked />
+      <lockmessage>There hangs a lock with a key hole.. the lock is locked.</lockmessage>
+    </exit>
+    <object name="Lr2">
+      <inherit name="editor_object" />
+      <take type="boolean">false</take>
+      <attr name="feature_wearable" type="boolean">false</attr>
+      <attr name="feature_player" type="boolean">false</attr>
+      <feature_usegive />
+      <feature_container />
+      <use type="boolean">false</use>
+      <alias>West Lock</alias>
+      <scenery type="boolean">false</scenery>
+    </object>
+    <object name="Lr3">
+      <inherit name="editor_object" />
+      <alias>South Lock</alias>
+    </object>
+    <object name="Lr4">
+      <inherit name="editor_object" />
+      <alias>East Lock</alias>
+    </object>
+    <object name="Lr5">
+      <inherit name="editor_object" />
+      <alias>North Lock</alias>
+    </object>
+    <object name="Vinegar">
+      <inherit name="editor_object" />
+      <alias>Bottle of  Vinegar</alias>
+      <take />
+      <takemsg>This may come in handy</takemsg>
+      <feature_usegive />
+      <look>You know it stinks.. but its' STRONG acid can be useful...</look>
+      <use />
+      <selfuseon type="scriptdictionary">
+        <item key="Rusty ol Key In Bowl"><![CDATA[
+          if (Got(Rusty ol Key In Bowl)) {
+            PrintCentered ("<b>Rusty ol Key:</b>\"Stinky come clean me!\"")
+            picture ("rustykey.jpg")
+            msg ("You pour the vinegar in the bowl with the rusty ol key..")
+            AddToInventory (Key In Bowl)
+            RemoveObject (Rusty ol Key In Bowl)
+            play sound ("Toxic Goo-SoundBible.com-392739082.mp3", false, false)
+            PrintCentered ("<b>Key:</b> .... Hi there.")
+            picture ("key.jpg")
+          }
+        ]]></item>
+      </selfuseon>
+    </object>
+    <object name="Bowl">
+      <inherit name="editor_object" />
+      <alias>Bowl</alias>
+      <look>It's round and deep, looks like it can hold a thing or two...</look>
+      <isroom type="boolean">false</isroom>
+      <take />
+      <feature_usegive />
+      <use />
+      <useon type="scriptdictionary" />
+      <selfuseon type="scriptdictionary">
+        <item key="RustyKey">
+          msg ("yay used")
+        </item>
+      </selfuseon>
+    </object>
+    <object name="RustyKey">
+      <inherit name="editor_object" />
+      <takemsg>It's about time we have united!</takemsg>
+      <drop type="boolean">false</drop>
+      <dropmsg><![CDATA[<b>Key:</b>Oh my dear friend, you've signed yourself up for this ever since you picked me up, <br>You canNOT let me go!~]]></dropmsg>
+      <alias>Rusty ol Key</alias>
+      <scenery type="boolean">false</scenery>
+      <visible type="boolean">false</visible>
+      <look>You wana look at ME the KEY HUH? YOU WANA LOOK?! Look away I guess I can't do anything bout tha...</look>
+      <feature_usegive />
+      <inventoryverbs type="stringlist">
+        <value>Look at</value>
+        <value>Drop</value>
+      </inventoryverbs>
+      <use />
+      <usedefaultprefix type="boolean">false</usedefaultprefix>
+      <take type="script"><![CDATA[
+        PrintCentered ("<b>Key:</b> It's about time we united! ")
+        picture ("rustykey.jpg")
+        AddToInventory (RustyKey)
+      ]]></take>
+      <useon type="scriptdictionary">
+        <item key="Bowl"><![CDATA[
+          if (Got(Bowl)) {
+            PrintCentered ("<b>Key:</b>The Rusty ol key was put into the bowl</br><b>Key:</b>SWIPITY SWOOSH!")
+            picture ("rustykey.jpg")
+            AddToInventory (Rusty ol Key In Bowl)
+            RemoveObject (Bowl)
+            RemoveObject (RustyKey)
+            play sound ("pin_dropping-Brian_Rocca-2084700791.mp3", false, false)
+          }
+        ]]></item>
+        <item key="Vinegar">
+          PrintCentered ("That's NOT what I'm used for, and I can't even fit in that hole... Looool")
+          picture ("rustykey.jpg")
+        </item>
+        <item key="Lr2">
+          PrintCentered ("I can almost squeeze in... if only I was a bit cleaner...")
+          picture ("rustykey.jpg")
+        </item>
+        <item key="Lr3">
+          PrintCentered ("There's no way I can fit there in the state I'm in...")
+          picture ("rustykey.jpg")
+        </item>
+        <item key="Lr4">
+          PrintCentered ("Hey! what'ya know.. I finally fit! Too well actually... there's a lot of loose space...")
+          picture ("rustykey.jpg")
+        </item>
+        <item key="Lr5"><![CDATA[
+          PrintCentered ("<b>Key:</b>The rust makes the key a tidy bit too big... if there was a way to remove it *cough vinegar*")
+          picture ("rustykey.jpg")
+        ]]></item>
+      </useon>
+    </object>
+    <object name="rocks">
+      <inherit name="editor_object" />
+      <alias>Rubble of Rocks</alias>
+      <look>It seems to be moving and making sounds...?</look>
+      <takemsg>As you take the rocks, an old and rusty key tries to communicate with you....</takemsg>
+      <drop type="boolean">false</drop>
+      <not_all />
+      <take type="script"><![CDATA[
+        if (not ListContains(ScopeVisible(), Key)) {
+          firsttime {
+            MakeObjectVisible (RustyKey)
+            msg ("Cringy sounds just got louder...")
+            AddToInventory (Rock)
+          }
+          otherwise {
+            create ("Rock")
+            AddToInventory (Rock)
+            PrintCentered ("<b>Key:</b>\"more rocks.. <b>must</b>... <u>have</u>.... <b><u>MORE!</b></u>\"     lmao...")
+            picture ("rustykey.jpg")
+          }
+        }
+      ]]></take>
+    </object>
+    <object name="Rubber">
+      <inherit name="editor_object" />
+      <feature_usegive />
+      <take />
+      <use />
+      <selfuseon type="scriptdictionary">
+        <item key="Electrified Key">
+          if (Got(Electrified Key)) {
+            msg ("You swiftly use the rubber on the key to not shock yourself, twist and open the door saving your pal!")
+            AddToInventory (Key)
+            stop sound
+            play sound ("Door Unlock-SoundBible.com-1558114225.mp3", false, false)
+            UnlockExit (Er5)
+            RemoveObject (Electrified Key)
+            RemoveObject (Lr5)
+          }
+        </item>
+      </selfuseon>
+    </object>
+  </object>
+  <object name="r2">
+    <inherit name="editor_room" />
+    <isroom />
+    <description type="string"></description>
+    <alias>Cold and Chill Room 1</alias>
+    <exit alias="east" to="r1">
+      <inherit name="eastdirection" />
+    </exit>
+    <object name="X wall">
+      <inherit name="editor_object" />
+      <scenery type="boolean">false</scenery>
+      <useindividualverblist type="boolean">false</useindividualverblist>
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : X - "O"]]></look>
+      <alias>X wall</alias>
+    </object>
+    <object name="Y wall">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : X - "$"]]></look>
+      <alias>Y wall</alias>
+    </object>
+    <object name="Z wall">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : Z - "G"]]></look>
+      <alias>Z wall</alias>
+    </object>
+    <object name="Canister">
+      <inherit name="editor_object" />
+      <look><![CDATA[There's a label... <b><i><u>Liquid Nitrogen</u></i></b>]]></look>
+      <alias>Canister</alias>
+      <feature_usegive />
+      <use />
+      <take />
+      <ontake type="script"><![CDATA[
+        msg ("You read a label... <b>Liquid Nitrogen\"</b>")
+      ]]></ontake>
+      <selfuseon type="scriptdictionary">
+        <item key="Key In Bowl">
+          if (Got(Key In Bowl)) {
+            play sound ("Bubbling Cauldron-SoundBible.com-144527974.mp3", false, false)
+            msg ("OOOOoooo III'mmmmm FREEEezzzinnn....")
+            picture ("Coldkey.jpg")
+            AddToInventory (Cold Key In Bowl)
+            RemoveObject (Key In Bowl)
+          }
+        </item>
+      </selfuseon>
+    </object>
+    <object name="Thermal gloves">
+      <inherit name="editor_object" />
+      <inherit name="wearable" />
+      <feature_wearable />
+      <attr name="wear_layer" type="int">2</attr>
+      <wear_slots type="stringlist">
+        <value>Hands</value>
+      </wear_slots>
+    </object>
+  </object>
+  <object name="r3">
+    <inherit name="editor_room" />
+    <isroom />
+    <alias>Energy and Heat Room 2</alias>
+    <exit alias="north" to="r1">
+      <inherit name="northdirection" />
+    </exit>
+    <object name="X wall1">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : X - "P"]]></look>
+      <alias>X wall</alias>
+    </object>
+    <object name="Y wall1">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : Y - "S"]]></look>
+      <alias>Y wall</alias>
+    </object>
+    <object name="Z wall1">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : Z - "#"]]></look>
+      <alias>Z wall</alias>
+    </object>
+    <object name="Hammer">
+      <inherit name="editor_object" />
+      <alias>Hammer</alias>
+      <feature_usegive />
+      <use />
+      <take />
+      <takemsg><![CDATA[Hammers have various uses...interesting outcome if <b>hit on a rock</b>]]></takemsg>
+      <selfuseon type="scriptdictionary">
+        <item key="Rock"><![CDATA[
+          ShowYouTube ("y_KmK0dcHFs")
+          EnableTimer (tiktok)
+          msg ("You swing and swing at the rock... <b>50%</b> of time creating a spark")
+        ]]></item>
+      </selfuseon>
+    </object>
+    <object name="Fuel">
+      <inherit name="editor_object" />
+      <alias>Bottle of  Fuel</alias>
+      <take />
+      <takemsg>This may come in handy</takemsg>
+      <feature_usegive />
+      <look>You know it stinks.. but its' STRONG acid can be useful...</look>
+      <use />
+      <selfuseon type="scriptdictionary">
+        <item key="Cold Key In Bowl"><![CDATA[
+          if (Got(Cold Key In Bowl)) {
+            PrintCentered ("<b>Rusty ol Key:</b>\"Please get me warmer!\"")
+            msg ("You pour the vinegar in the bowl with the rusty ol key..")
+            AddToInventory (Key In Flammable Bowl)
+            RemoveObject (Cold Key In Bowl)
+          }
+        ]]></item>
+        <item key="Key In Bowl"><![CDATA[
+          if (Got(Key In Bowl)) {
+            PrintCentered ("<b>Rusty ol Key:</b>\"Please get me warmer!\"")
+            msg ("You pour the vinegar in the bowl with the rusty ol key..")
+            AddToInventory (Key In Flammable Bowl)
+            RemoveObject (Cold Key In Bowl)
+          }
+        ]]></item>
+      </selfuseon>
+    </object>
+  </object>
+  <object name="r4">
+    <inherit name="editor_room" />
+    <isroom />
+    <alias>Empty room? 3</alias>
+    <exit alias="west" to="r1">
+      <inherit name="westdirection" />
+    </exit>
+    <object name="X wall2">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : X - "E"]]></look>
+      <alias>X wall</alias>
+    </object>
+    <object name="Y wall2">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : Y - "F"]]></look>
+      <alias>Y wall</alias>
+    </object>
+    <object name="Z wall2">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : Z - "W"]]></look>
+      <alias>Z wall</alias>
+    </object>
+  </object>
+  <object name="r5">
+    <inherit name="editor_room" />
+    <alias>Final Room 4</alias>
+    <exit alias="south" to="r1">
+      <inherit name="southdirection" />
+    </exit>
+    <object name="X wall3">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : X - "N"]]></look>
+      <alias>X wall</alias>
+    </object>
+    <object name="Y wall3">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : Y - "L"]]></look>
+      <alias>Y wall</alias>
+    </object>
+    <object name="Z wall3">
+      <inherit name="editor_object" />
+      <look><![CDATA[You approach the wall, you see some sht inscribed on there..<br/>You Squint to see the sht...<br/>You Decipher the sht....<br/><br/>Sht says : Z - "C"]]></look>
+      <alias>Z wall</alias>
+    </object>
+    <object name="XChest">
+      <inherit name="editor_object" />
+      <inherit name="container_closed" />
+      <inherit name="container_lockable" />
+      <look><![CDATA[<b>Key:</b>After all my suffering... the gods will reward me with this treasure!<br/><br>It's a chest.. with a large "<b>X"</b> Centered ontop... hmm... x....]]></look>
+      <alias>Chest</alias>
+      <useindividualverblist type="boolean">false</useindividualverblist>
+      <displayverbs type="stringlist">
+        <value>Look at</value>
+        <value>Enter code</value>
+      </displayverbs>
+      <inventoryverbs type="stringlist" />
+      <feature_container />
+      <autounlock type="boolean">false</autounlock>
+      <autoopen type="boolean">false</autoopen>
+      <nokeymessage>No key hole? A small ancient keyboard to enter some sorta passcode?</nokeymessage>
+      <canlockopen type="boolean">false</canlockopen>
+      <entercode type="script"><![CDATA[
+        TextFX_Typewriter ("<b>Enter 4 Letter Code:<b>", 100)
+        get input {
+          if (result = "OPEN") {
+            TextFX_Typewriter ("That's the one...", 30)
+            HelperOpenObject (XChest)
+          }
+          else {
+            TextFX_Typewriter ("<b>Not the one....</b>", 30)
+          }
+        }
+      ]]></entercode>
+      <onopen type="script"><![CDATA[
+        play sound ("Ta Da-SoundBible.com-1884170640.mp3", false, false)
+        PrintCentered ("<b>Key:</b>LEZ GO! Here she comes with all her glory!!!")
+        msg ("You Open the Chest and find a pill inside... you don't question it and pick it up.")
+        AddToInventory (Pill)
+      ]]></onopen>
+    </object>
+  </object>
+  <verb>
+    <property>approach..squintanddecipherinscription</property>
+    <pattern>approach.. squint and decipher inscription</pattern>
+    <defaultexpression>"You can't approach.. squint and decipher inscription " + object.article + "."</defaultexpression>
+  </verb>
+  <verb>
+    <property>approachsquintanddecipherinscription</property>
+    <pattern>approach squint and decipher inscription</pattern>
+    <defaultexpression>"You can't approach squint and decipher inscription " + object.article + "."</defaultexpression>
+  </verb>
+  <verb>
+    <property>entercode</property>
+    <pattern>enter code</pattern>
+    <defaultexpression>"You can't enter code " + object.article + "."</defaultexpression>
+  </verb>
+  <verb>
+    <property>example</property>
+    <pattern>example</pattern>
+    <defaultexpression>"You can't example " + object.article + "."</defaultexpression>
+  </verb>
+  <verb>
+    <property>useon</property>
+    <pattern>use on</pattern>
+    <defaultexpression>"You can't use on " + object.article + "."</defaultexpression>
+  </verb>
+  <object name="Rusty ol Key In Bowl">
+    <inherit name="editor_object" />
+    <take />
+    <takeoutrustyolkey type="script">
+      AddToInventory (Bowl)
+      AddToInventory (RustyKey)
+      RemoveObject (Rusty ol Key In Bowl)
+    </takeoutrustyolkey>
+  </object>
+  <object name="Key In Bowl">
+    <inherit name="editor_object" />
+    <takeoutkey type="script">
+      AddToInventory (Key)
+      AddToInventory (Bowl)
+      RemoveObject (Key In Bowl)
+    </takeoutkey>
+  </object>
+  <verb>
+    <property>takeoutrustyolkey</property>
+    <pattern>take out rusty ol key</pattern>
+    <defaultexpression>"You can't take out rusty ol key " + object.article + "."</defaultexpression>
+  </verb>
+  <verb>
+    <property>takeoutkey</property>
+    <pattern>take out key</pattern>
+    <defaultexpression>"You can't take out key " + object.article + "."</defaultexpression>
+  </verb>
+  <object name="Cold Key In Bowl">
+    <inherit name="editor_object" />
+    <take />
+    <takeoutcoldkey type="script"><![CDATA[
+      if (Got(Thermal gloves)) {
+        msg ("TH-th-t... Thank you!")
+        picture ("Coldkey.jpg")
+        AddToInventory (Cold key)
+        AddToInventory (Bowl)
+        RemoveObject (Cold Key In Bowl)
+      }
+      else {
+        msg ("Putting my hand in would cause severe damage <b>without protection...</b>")
+      }
+    ]]></takeoutcoldkey>
+  </object>
+  <verb>
+    <property>takeoutcoldkey</property>
+    <pattern>take out cold key</pattern>
+    <defaultexpression>"You can't take out cold key " + object.article + "."</defaultexpression>
+  </verb>
+  <object name="Rock">
+    <inherit name="editor_object" />
+    <take />
+  </object>
+  <object name="Hot Key In Bowl">
+    <inherit name="editor_object" />
+    <take />
+    <takeouthotkey type="script">
+      if (Got(Thermal gloves)) {
+        msg ("FFFF-fff.. FINALY!")
+        picture ("HotKey.jpg")
+        AddToInventory (Hot key)
+        AddToInventory (Bowl)
+        RemoveObject (Hot Key In Bowl)
+      }
+      else {
+        msg ("Are you serious? Taking that with bare hands.. cmon now XD")
+      }
+    </takeouthotkey>
+  </object>
+  <verb>
+    <property>takeouthotkey</property>
+    <pattern>take out hot key</pattern>
+    <defaultexpression>"You can't take out hot key " + object.article + "."</defaultexpression>
+  </verb>
+  <object name="Electrified Key">
+    <inherit name="editor_object" />
+    <take />
+  </object>
+  <object name="Pill">
+    <inherit name="editor_object" />
+    <attr name="feature_edible" type="boolean">false</attr>
+    <take />
+    <eatmsg>mmm</eatmsg>
+    <eat type="script"><![CDATA[
+      PrintCentered ("<b>Key: Hey! Sharing is caring.... now you've done goofED!")
+      play sound ("Electricity-SoundBible.com-965518507.mp3", false, false)
+      picture ("key.jpg")
+      ShowYouTube ("qfobubLVYXw")
+      finish
+    ]]></eat>
+  </object>
+  <object name="Key In Flammable Bowl">
+    <inherit name="editor_object" />
+    <take />
+  </object>
+  <object name="Cold key">
+    <inherit name="editor_object" />
+    <alias>Cold key</alias>
+    <feature_usegive />
+    <use />
+    <take />
+    <selfuseon type="scriptdictionary">
+      <item key="Lr3">
+        if (Got(Cold key)) {
+          msg ("You attempt to put the key in the hole...")
+          msg ("You: What'ya know, this key can do more than just talk")
+          UnlockExit (Er3)
+          play sound ("Door Unlock-SoundBible.com-1558114225.mp3", false, false)
+          RemoveObject (Lr3)
+        }
+      </item>
+      <item key="Lr5">
+        if (game.pov.parent = r1) {
+          if (Got(Cold key)) {
+            AddToInventory (Electrified Key)
+            RemoveObject (Cold key)
+            msg ("OOO MMM FFF GGGGG SS S S S SS AAAVEE MEEEEE!!")
+            play sound ("Electric Shock Zap-SoundBible.com-68983399.mp3", false, true)
+            picture ("electrified.jpg")
+          }
+        }
+      </item>
+      <item key="Bowl"><![CDATA[
+        if (Got(Bowl)) {
+          msg ("<b>Key:</b>Here we go again...")
+          picture ("Coldkey.jpg")
+          AddToInventory (Cold Key In Bowl)
+          RemoveObject (Bowl)
+          RemoveObject (Cold key)
+          play sound ("pin_dropping-Brian_Rocca-2084700791.mp3", false, false)
+        }
+      ]]></item>
+    </selfuseon>
+  </object>
+  <object name="Key">
+    <inherit name="editor_object" />
+    <feature_usegive />
+    <use />
+    <take />
+    <speak type="script">
+      msg ("I'm a key, you put me in and twist and hopefully if all is nice and dandy, I unlock!")
+      picture ("key.jpg")
+    </speak>
+    <selfuseon type="scriptdictionary">
+      <item key="Lr2">
+        if (Got(Key)) {
+          msg ("You attempt to put the key in the hole...")
+          msg ("You: What'ya know, this key can do more than just talk")
+          UnlockExit (Er2)
+          play sound ("Door Unlock-SoundBible.com-1558114225.mp3", false, false)
+          RemoveObject (Lr2)
+        }
+      </item>
+      <item key="Bowl"><![CDATA[
+        if (Got(Bowl)) {
+          PrintCentered ("<b>Key:</b>Here we go again...")
+          picture ("key.jpg")
+          AddToInventory (Key In Bowl)
+          RemoveObject (Bowl)
+          RemoveObject (Key)
+          play sound ("pin_dropping-Brian_Rocca-2084700791.mp3", false, false)
+        }
+      ]]></item>
+      <item key="Lr5">
+        if (game.pov.parent = r1) {
+          if (Got(Key)) {
+            AddToInventory (Electrified Key)
+            RemoveObject (Key)
+            msg ("OOO MMM FFF GGGGG SS S S S SS AAAVEE MEEEEE!!")
+            play sound ("Electric Shock Zap-SoundBible.com-68983399.mp3", false, true)
+            picture ("electrified.jpg")
+          }
+        }
+      </item>
+      <item key="Lr3"><![CDATA[
+        PrintCentered ("<b>Key:</b>I cannot fit! I'm a bit too big even with rust off now...")
+        picture ("key.jpg")
+      ]]></item>
+      <item key="Lr4"><![CDATA[
+        PrintCentered ("<b>Key:</b>I fit too wel... don't connect with lock ")
+        picture ("key.jpg")
+      ]]></item>
+    </selfuseon>
+  </object>
+  <object name="Hot key">
+    <inherit name="editor_object" />
+    <inherit name="editor_player" />
+    <attr name="feature_player" type="boolean">false</attr>
+    <feature_usegive />
+    <use />
+    <take />
+    <selfuseon type="scriptdictionary">
+      <item key="Lr4">
+        if (Got(Hot key)) {
+          msg ("You attempt to put the key in the hole...")
+          msg ("You: The Heat expanded this key and it's mouth even more.. enough to fit perfactly!")
+          UnlockExit (Er4)
+          play sound ("Door Unlock-SoundBible.com-1558114225.mp3", false, false)
+          RemoveObject (Lr4)
+        }
+      </item>
+    </selfuseon>
+  </object>
+  <timer name="tiktok">
+    <interval>4</interval>
+    <enabled type="boolean">false</enabled>
+    <script><![CDATA[
+      if (Got(Key In Flammable Bowl)) {
+        if (RandomChance(50)) {
+          msg ("A spark happens to fall into your bowl..")
+          ShowYouTube ("bhZs3ALdL7Y")
+          PrintCentered ("<b>Key:</b> I thought we were friends!")
+          play sound ("Fire-SoundBible.com-517801090.mp3", false, false)
+          picture ("HotKey.jpg")
+          msg ("<b>Key: IM SO HOT AND OVER THESE BOWLS GET ME OUT!</b>")
+          DisableTimer (tiktok)
+          AddToInventory (Hot Key In Bowl)
+          RemoveObject (Key In Flammable Bowl)
+        }
+        else {
+          msg ("You strike at the rock with your hammer and fail to produce spark or entirely miss the dam rock!")
+        }
+      }
+      else if (not Got(Key In Flammable Bowl)) {
+        if (RandomChance(50)) {
+          msg ("You hit and create a spark!")
+          DisableTimer (tiktok)
+        }
+        else {
+          msg ("You hit and don't create a spark..")
+          DisableTimer (tiktok)
+        }
+        msg ("You attempt to create a spark for whatever reason since you don't have somthing <b>flammable</b>")
+      }
+    ]]></script>
+  </timer>
+  <timer name="falling">
+    <interval>1</interval>
+    <script>
+    </script>
+  </timer>
+</asl>
